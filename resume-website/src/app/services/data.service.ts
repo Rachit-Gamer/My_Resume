@@ -1,9 +1,17 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DataService {
+  getSkills() {
+    return ['Java', 'Angular', 'Spring Boot', 'TypeScript', 'Python'];
+  }
 
-  constructor() { }
+  getProjects() {
+    return [
+      { name: 'Fluid Simulation', description: 'A physics-based simulation project.' },
+      { name: 'WhatsApp Chat Analysis', description: 'Deployed with Heroku.' },
+    ];
+  }
 }

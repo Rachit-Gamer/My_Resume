@@ -1,11 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-skills',
-  imports: [],
   templateUrl: './skills.component.html',
-  styleUrl: './skills.component.css'
 })
-export class SkillsComponent {
+export class SkillsComponent implements OnInit {
+  skills: string[] = [];
 
+  constructor(private dataService: DataService) {}
+
+  ngOnInit(): void {
+    this.skills = this.dataService.getSkills();
+  }
 }
