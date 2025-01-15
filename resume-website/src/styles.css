@@ -1,184 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
-/* Global Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #333;
-    background: #f9f9f9;
-  }
-  
-  /* Navbar */
-  nav {
-    background: #007bff;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  nav .navbar-brand {
-    color: #fff;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  nav .nav-link {
-    color: #fff;
-    margin-right: 1rem;
-    transition: color 0.3s ease;
-  }
-  
-  nav .nav-link:hover {
-    color: #ffeeba;
-  }
-  
-  /* Section Headings */
-  section h2 {
+h2 {
     font-size: 2rem;
+    text-transform: uppercase;
+    color: #6a0dad; /* Default color (purple) */
+    position: relative;
     text-align: center;
     margin-bottom: 1rem;
-    color: #007bff;
-    text-transform: uppercase;
-    position: relative;
+    transition: all 0.3s ease; /* Smooth transition */
   }
   
-  section h2::after {
+  h2:hover {
+    background: linear-gradient(90deg, #6a0dad, #f7e673); /* Purple to yellowish gradient */
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.5s ease; /* Smooth transition on hover */
+  }
+  
+  h2::after {
     content: '';
     display: block;
     width: 50px;
     height: 3px;
-    background: #007bff;
+    background: #6a0dad;
     margin: 0.5rem auto 0;
+    transition: background 0.3s ease;
   }
   
-  /* About Section */
-  #about {
-    background: #ffffff;
-    padding: 2rem 1rem;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 2rem auto;
-    max-width: 800px;
-    transition: transform 0.3s ease-in-out;
+  h2:hover::after {
+    background: linear-gradient(90deg, #6a0dad, #f7e673); /* Matches gradient on hover */
+  }
+
+  /* Style for the box around h2 */
+h2-wrapper {
+    display: inline-block; /* Make the box fit the content */
+    padding: 1rem; /* Add padding around the h2 */
+    border: 2px solid transparent; /* Default border is transparent */
+    border-radius: 10px; /* Rounded corners for the box */
+    transition: border-color 0.3s ease, background-color 0.3s ease;
   }
   
-  #about:hover {
-    transform: scale(1.02);
+  h2-wrapper:hover {
+    border-color: #6a0dad; /* Purple border on hover */
+    background: rgba(106, 13, 173, 0.1); /* Light purple background */
+    transition: border-color 0.3s ease, background-color 0.3s ease;
   }
   
-  /* Skills Section */
-  #skills ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+  /* Gradient effect on h2 within the box */
+  h2-wrapper:hover h2 {
+    background: linear-gradient(90deg, #6a0dad, #f7e673); /* Purple to yellow gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.5s ease;
   }
   
-  #skills ul li {
-    background: #007bff;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    transition: background 0.3s ease-in-out, transform 0.3s ease;
-  }
-  
-  #skills ul li:hover {
-    background: #0056b3;
-    transform: translateY(-5px);
-  }
-  
-  /* Experience Section */
-  #experience ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  #experience ul li {
-    background: #ffffff;
-    margin: 1rem 0;
-    padding: 1rem;
-    border-left: 5px solid #007bff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  #experience ul li:hover {
-    transform: translateX(10px);
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Projects Section */
-  #projects ul {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-  }
-  
-  #projects ul li {
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 1rem;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-  }
-  
-  #projects ul li:hover {
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
-    transform: scale(1.05);
-  }
-  
-  /* Contact Section */
-  #contact form {
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 2rem auto;
-  }
-  
-  #contact .form-control {
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 0.5rem;
-  }
-  
-  #contact button {
-    background: #007bff;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: background 0.3s ease-in-out, transform 0.3s ease;
-  }
-  
-  #contact button:hover {
-    background: #0056b3;
-    transform: translateY(-3px);
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    nav .navbar-nav {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    #projects ul {
-      grid-template-columns: 1fr;
-    }
-  
-    #skills ul {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
   

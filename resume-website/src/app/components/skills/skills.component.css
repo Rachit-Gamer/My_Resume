@@ -1,0 +1,21 @@
+#skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  #skills ul li {
+    background: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: background 0.3s ease-in-out, transform 0.3s ease;
+  }
+  
+  #skills ul li:hover {
+    background: #0056b3;
+    transform: translateY(-5px);
+  }
+  
