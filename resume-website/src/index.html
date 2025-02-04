@@ -1,13 +1,204 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>ResumeWebsite</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta charset="UTF-8">
+  <title>Rachit A. Borkar – Resume</title>
+  <!-- Optional: Include a Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
+  
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: #333;
+    }
+    h1, h2 {
+      margin: 0;
+      padding: 0;
+      font-weight: bold;
+    }
+    h1 {
+      font-size: 1.8em;
+    }
+    h2 {
+      font-size: 1.4em;
+      color: #B22222; /* BrickRed */
+      margin-top: 30px;
+      margin-bottom: 5px;
+      border-bottom: 1px solid #B22222;
+      padding-bottom: 4px;
+    }
+    /* Header layout (name and photo side by side) */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+    .header-left {
+      width: 70%;
+    }
+    .header-right {
+      width: 25%;
+      text-align: right;
+    }
+    .header-right img {
+      width: 3cm;
+      height: 3.5cm;
+      object-fit: cover;
+      object-position: center;
+    }
+    .contact-info {
+      margin-top: 5px;
+      font-size: 0.9em;
+      line-height: 1.4em;
+    }
+    .contact-info a {
+      text-decoration: none;
+      color: #0366d6;
+      margin-right: 15px;
+    }
+    .section {
+      margin-top: 10px;
+    }
+    ul {
+      margin-top: 5px;
+      margin-bottom: 10px;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 4px;
+      line-height: 1.4em;
+    }
+    .project-title {
+      font-weight: bold;
+    }
+    .link {
+      font-weight: normal;
+      margin-left: 5px;
+    }
+    .skills-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    .skills-list li {
+      margin-bottom: 5px;
+    }
+  </style>
 </head>
 <body>
-  <app-root></app-root>
+
+  <!-- HEADER SECTION -->
+  <div class="header">
+    <!-- Left side: Name and contact info -->
+    <div class="header-left">
+      <h1>Rachit A. Borkar</h1>
+      <div class="contact-info">
+        <!-- You can replace emojis with Font Awesome icons if preferred -->
+        <span>📱 +91-7028165690</span>
+        <a href="mailto:rachit242.rb@gmail.com">✉ rachit242.rb@gmail.com</a>
+        <a href="https://www.linkedin.com/in/rachit-borkar-4ba13a236/">LinkedIn</a>
+        <a href="https://github.com/Rachit-Gamer">Github</a>
+        <br>
+        <!-- Address -->
+        426/1, PM Chaure Path, Saraswat Colony, Somwar Peth,<br>
+        Pune, Maharashtra 411011
+      </div>
+    </div>
+    <!-- Right side: Photo -->
+    <div class="header-right">
+      <img src="https://assets.onecompiler.app/43842uq4s/43842sh6c/MyRealPic.jpg" alt="Profile Photo">
+    </div>
+  </div>
+
+  <!-- ABOUT ME SECTION -->
+  <div class="section">
+    <h2>About Me</h2>
+    <p>
+      A motivated full-stack developer with expertise in Java, Python, JavaScript, and Spring Boot, specializing 
+      in AI-powered applications. Currently pursuing a B. Tech in Computer Science at IIIT Pune. Experienced in 
+      database management, cloud computing, and AI-powered applications. Passionate about problem-solving, 
+      innovation, and software performance optimization.
+    </p>
+  </div>
+
+  <!-- EDUCATION SECTION -->
+  <div class="section">
+    <h2>Education</h2>
+    <ul>
+      <li>
+        <strong>Indian Institute of Information Technology, Pune</strong> (2021 - 2025)<br>
+        B.Tech in Computer Science &amp; Engineering<br>
+        <em>CGPA: 8.91/10</em>
+      </li>
+      <li>
+        <strong>Gyanavapi Junior College, Nallakunta, Hyderabad, Telangana</strong><br>
+        Junior College Education<br>
+        Graduation: January 2021
+      </li>
+      <li>
+        <strong>Spicer Higher Secondary School, Pune, Maharashtra</strong><br>
+        School Education<br>
+        Graduation: February 2019
+      </li>
+    </ul>
+  </div>
+
+  <!-- PROJECTS SECTION -->
+  <div class="section">
+    <h2>Projects</h2>
+    <ul>
+      <li>
+        <span class="project-title">Spring Boot Microservices Project</span>
+        <span class="link">(<a href="https://github.com/Rachit-Gamer/MicroServices-using-java">Link</a>)</span>
+        <ul>
+          <li>Developed a scalable e-commerce platform using microservices with API Gateway, inventory management, and order processing.</li>
+          <li>Secured with JWT authentication and deployed via Docker and Kubernetes.</li>
+          <li>Enabled real-time monitoring with Prometheus and Grafana, using RabbitMQ for fault-tolerant communication.</li>
+        </ul>
+      </li>
+      <li>
+        <span class="project-title">WhatsApp Chat Analyzer</span>
+        <span class="link">(<a href="https://github.com/Rachit-Gamer/Whatsapp-chat-analyzer">Link</a>)</span>
+        <ul>
+          <li>Created a data visualization tool to analyze chat activity, emoji trends, and shared URLs.</li>
+          <li>Implemented advanced analytics using Pandas, NumPy, Matplotlib, and Seaborn.</li>
+        </ul>
+      </li>
+      <li>
+        <span class="project-title">CDP Chatbot</span>
+        <span class="link">(<a href="https://github.com/Rachit-Gamer/cdp-CHATBOT">Link</a>)</span>
+        <ul>
+          <li>Developed a chatbot handling “how-to” queries for Segment, mParticle, Lytics, and Zeotap CDPs.</li>
+          <li>Utilized OpenAI GPT-4 API, NLP, and Express for cross-CDP comparisons.</li>
+        </ul>
+      </li>
+      <li>
+        <span class="project-title">Spreadsheet-Like Web Application</span>
+        <span class="link">(<a href="https://github.com/Rachit-Gamer/google-sheets-clone">Link</a>)</span>
+        <ul>
+          <li>Developed a Google Sheets-like web application with formula parsing, clipboard operations, and multiple sheets.</li>
+          <li>Integrated data visualization using Chart.js and enhanced usability with drag-and-drop functionality.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- SKILLS SECTION -->
+  <div class="section">
+    <h2>Technical Skills</h2>
+    <ul class="skills-list">
+      <li><strong>Languages:</strong> Java, Python, C++, C#, SQL, JavaScript, HTML, CSS</li>
+      <li><strong>Backend:</strong> Spring Boot, Spring Cloud, Hibernate, JPA, Microservices, RESTful APIs, WebSockets</li>
+      <li><strong>Frontend:</strong> React, TailwindCSS, Bootstrap</li>
+      <li><strong>Cloud &amp; DevOps:</strong> AWS, Google Cloud, Docker, Kubernetes, CI/CD</li>
+      <li><strong>Databases:</strong> MySQL, PostgreSQL, MongoDB</li>
+      <li><strong>Developer Tools:</strong> IntelliJ, VS Code, Git, Jenkins, Postman</li>
+    </ul>
+  </div>
+
 </body>
 </html>
